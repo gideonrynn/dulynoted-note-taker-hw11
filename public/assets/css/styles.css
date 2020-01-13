@@ -4,6 +4,16 @@ html, body {
   padding: 0;
 }
 
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+
+.navbar {
+  background-color: #36454f;
+}
+
 .save-note {
   display: none;
 }
@@ -67,4 +77,8 @@ html, body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+}
+
+.btn {
+  background-color: #36454f;
 }
