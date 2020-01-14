@@ -15,9 +15,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //Data is set up in the db/db.json file
 
-console.log(__dirname);
+//Set up our routes in the api and html routes files
 
-//Set up our routes
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
   });

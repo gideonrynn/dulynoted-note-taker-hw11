@@ -1,65 +1,65 @@
-var $noteTitle = $(".note-title");
-var $noteText = $(".note-textarea");
-var $saveNoteBtn = $(".save-note");
-var $newNoteBtn = $(".new-note");
-var $noteList = $(".list-container .list-group");
+let $noteTitle = $(".note-title");
+let $noteText = $(".note-textarea");
+let $saveNoteBtn = $(".save-note");
+let $newNoteBtn = $(".new-note");
+let $noteList = $(".list-container .list-group");
 
 // activeNote is used to keep track of the note in the textarea
-var activeNote = {};
+let activeNote = {};
 
 // A function for getting all notes from the db
-var getNotes = function() {
+let getNotes = function() {
   
 };
 
 // A function for saving a note to the db
-var saveNote = function(note) {
+let saveNote = function(note) {
   
 };
 
 // A function for deleting a note from the db
-var deleteNote = function(title) {
+let deleteNote = function(title) {
   
 };
 
 // If there is an activeNote, display it, otherwise render empty inputs
-var renderActiveNote = function() {
+let renderActiveNote = function() {
   
 };
 
 // Get the note data from the inputs, save it to the db and update the view
-var handleNoteSave = function() {
+let handleNoteSave = function() {
   
 };
 
 // Delete the clicked note
-var handleNoteDelete = function(event) {
+let handleNoteDelete = function(event) {
   
 };
 
 // Sets the activeNote and displays it
-var handleNoteView = function() {
+let handleNoteView = function() {
   
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
-var handleNewNoteView = function() {
+let handleNewNoteView = function() {
   
 };
 
 // If a note's title or text are empty, hide the save button
 // Or else show it
-var handleRenderSaveBtn = function() {
+let handleRenderSaveBtn = function() {
   
 };
 
 // Render's the list of note titles
-var renderNoteList = function(notes) {
+let renderNoteList = function(notes) {
   
 };
 
 // Gets notes from the db and renders them to the sidebar
-var getAndRenderNotes = function() {
+let getAndRenderNotes = function() {
   
 };
 

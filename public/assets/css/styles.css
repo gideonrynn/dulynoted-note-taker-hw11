@@ -4,14 +4,32 @@ html, body {
   padding: 0;
 }
 
-.container {
+.container, body {
   height: 100%;
-  width: 100%;
+  background-color: #acd2e6;
 }
 
+.container {
+  max-width: 100%;
+}
+
+.index-title {
+  font-size: 60px;
+}
+
+.col-sidebar {
+  background-color: whitesmoke;
+  height: 100vh;
+  min-width: 300px;
+}
+
+.col-main {
+  height: 100vh;
+}
 
 .navbar {
   background-color: #36454f;
+
 }
 
 .save-note {
@@ -77,8 +95,9 @@ html, body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+  background-color: whitesmoke;
 }
 
-.btn {
+#startbtn {
   background-color: #36454f;
 }
