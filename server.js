@@ -3,6 +3,9 @@
 // Sets up dependencies
 const express = require("express");
 const path = require("path");
+// const fs = require('fs');
+const index = require("./routes/htmlRoutes")
+
 
 // Sets up express on port for localhost
 const app = express();
@@ -20,8 +23,6 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // Listener
-    app.listen(PORT, function() {
-
-    console.log("App listening on PORT " + PORT);
-
-  });
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
