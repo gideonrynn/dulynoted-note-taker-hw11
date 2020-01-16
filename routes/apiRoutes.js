@@ -1,24 +1,22 @@
-// const path = require("path");
-// const fs = require('fs');
+const path = require("path");
+const fs = require('fs');
 
 module.exports = function(app) {
 
     app.get("/api/notes", function(req, res) {
-        
-        getNotes()
-        // res.sendFile(path.normalize(__dirname, "../db", "/db.json"));
-        
-        
-        // let db = "db/db.json";
-        // let notesDBraw = fs.readFileSync(path.resolve(db));
-        // let notesDB = JSON.parse(notesDBraw);
 
-        //reads db file and console.logs contents
-        // console.log(notesDB);
+        //pull data from json file and send as response in json format
+        let notesDBraw = fs.readFileSync(path.resolve("db/db.json"));
+        let notesDB = JSON.parse(notesDBraw);
 
-        // insert the variable that represents the data from the db.json object, send it to the client
         res.json(notesDB);
-        
-    })
 
+        //or
+        // fs.readFile("db/db.json", "utf8", function(err, data) 
+        // { if (err) { throw err;}
+        //   res.send(data) //or res.json(data);
+        // })
+
+  });
+ 
 }
