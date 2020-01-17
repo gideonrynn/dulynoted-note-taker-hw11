@@ -2,30 +2,31 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-.container, body {
-  height: 100%;
   background-color: #acd2e6;
 }
 
-.container {
+/* .container, body {
+  /* height: 100%; */
+  /* background-color: #acd2e6;
+} */
+
+/* .container {
   max-width: 100%;
-}
+} */
 
 .index-title {
   font-size: 60px;
 }
 
-.col-sidebar {
+/* .col-sidebar {
   background-color: whitesmoke;
   height: 100vh;
   min-width: 300px;
-}
+} */
 
-.col-main {
+/* .col-main {
   height: 100vh;
-}
+} */
 
 .navbar {
   background-color: #36454f;

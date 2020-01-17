@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const dbFile = "db/db.json";
 const dbRaw = fs.readFileSync(path.resolve(dbFile));
-const db = JSON.parse(dbRaw);
+let db = JSON.parse(dbRaw);
 
 module.exports = function(app) {
 
@@ -17,15 +17,23 @@ module.exports = function(app) {
 
     app.post("/api/notes", function(req, res) {
 
-        //add new note object to the existing db array
-        db.push(req.body);
+        let newNote = req.body;
+        newNote['id'] = '';
+        console.log(newNote);
 
-        //write new array to the db.json
-        fs.writeFile(dbFile, JSON.stringify(db, null, 2), function(err) {
-            if (err) {
-              return console.log(err);
+        //add new note object to the existing db array
+        db.push(newNote);
+
+        //run loop that will check the value 
+        for (let i = 0; i < db.length; i++) {
+            if (db[i].id == "") {
+                db[i].id = i + 1;
             }
-            console.log("Success!");
+        };
+
+        //write updated db to db.json
+        fs.writeFile(dbFile, JSON.stringify(db, null, 2), function(err) {
+            if (err) {return console.log(err); }
           });
 
     });
