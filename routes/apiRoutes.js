@@ -28,7 +28,7 @@ module.exports = function(app) {
 
         //run loop that will check the id value and add number if blank
         for (let i = 0; i < db.length; i++) {
-            if (db[i].id == "") {
+            if (db[i].id == "" && db[i].id !== i) {
                 db[i].id = i + 1;
             }
         };
@@ -36,6 +36,8 @@ module.exports = function(app) {
         //write updated db to db.json
         fs.writeFile(dbFile, JSON.stringify(db, null, 2), function(err) {
             if (err) {return console.log(err); }
+
+            res.send(db);
           });
 
     });
@@ -54,11 +56,14 @@ module.exports = function(app) {
             dbNew[i].id = i + 1;
         };
 
+        console.log(dbNew)
+
         //write updated db to db json file
         fs.writeFile(dbFile, JSON.stringify(dbNew, null, 2), function(err) {
             if (err) {return console.log(err); }
-            });
 
+            res.send(dbNew);
+        });
     })
  
 }

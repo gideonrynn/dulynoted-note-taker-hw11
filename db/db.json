@@ -1,12 +1,22 @@
 [
   {
-    "title": "Repot plants",
-    "text": "Rosemary, oregano, thyme",
+    "title": "Go for a walk",
+    "text": "Go by grocery store",
     "id": 1
   },
   {
-    "title": "Plait hair",
-    "text": "Buy moisturizer first",
+    "title": "Pick up bread",
+    "text": "And other things",
     "id": 2
+  },
+  {
+    "title": "Repot rosemary",
+    "text": "or throw away if bad",
+    "id": 3
+  },
+  {
+    "title": "Respond to Emily",
+    "text": "Or not",
+    "id": 4
   }
 ]
