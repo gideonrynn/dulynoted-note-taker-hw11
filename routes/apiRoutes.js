@@ -16,6 +16,19 @@ module.exports = function(app) {
 
     });
 
+    app.get("/api/notes/:id", function(req, res) {
+
+        let id = req.params.id;
+
+        for (let i = 0; i < db.length; i++) {
+            if (id == db[i].id) {
+              res.send(db[i]);
+            } else {
+                res.send(`A note with this name does not exist.`);
+            }
+        } 
+    });
+
     app.post("/api/notes", function(req, res) {
 
         let newNote = req.body;
@@ -28,7 +41,7 @@ module.exports = function(app) {
 
         //run loop that will check the id value and add number if blank
         for (let i = 0; i < db.length; i++) {
-            if (db[i].id == "" && db[i].id !== i) {
+            if (db[i].id == "") {
                 db[i].id = i + 1;
             }
         };
@@ -56,7 +69,7 @@ module.exports = function(app) {
             dbNew[i].id = i + 1;
         };
 
-        console.log(dbNew)
+        console.log(dbNew);
 
         //write updated db to db json file
         fs.writeFile(dbFile, JSON.stringify(dbNew, null, 2), function(err) {
