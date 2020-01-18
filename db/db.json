@@ -1,12 +1,12 @@
 [
   {
-    "title": "Go for a walk",
-    "text": "Go by grocery store",
+    "title": "Add a note",
+    "text": "add",
     "id": 1
   },
   {
-    "title": "Pick up bread",
-    "text": "And other things",
+    "title": "Take a shower",
+    "text": "Scrub",
     "id": 2
   }
 ]

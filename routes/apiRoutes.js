@@ -6,9 +6,9 @@ const dbFile = "db/db.json";
 const dbRaw = fs.readFileSync(path.resolve(dbFile));
 let db = JSON.parse(dbRaw);
 
-
 module.exports = function(app) {
-
+    
+    //route that will display all notes in db in json format
     app.get("/api/notes", function(req, res) {
 
         //pull data from json file and send as response in json format
@@ -16,8 +16,8 @@ module.exports = function(app) {
 
     });
 
+    //route that will display specific object by id
     app.get("/api/notes/:id", function(req, res) {
-
         let id = req.params.id;
 
         for (let i = 0; i < db.length; i++) {
@@ -27,6 +27,7 @@ module.exports = function(app) {
                 res.send(`A note with this name does not exist.`);
             }
         } 
+
     });
 
     app.post("/api/notes", function(req, res) {
@@ -50,7 +51,9 @@ module.exports = function(app) {
         fs.writeFile(dbFile, JSON.stringify(db, null, 2), function(err) {
             if (err) {return console.log(err); }
 
+            //send db as response
             res.send(db);
+
           });
 
     });
@@ -69,14 +72,15 @@ module.exports = function(app) {
             dbNew[i].id = i + 1;
         };
 
-        console.log(dbNew);
-
         //write updated db to db json file
         fs.writeFile(dbFile, JSON.stringify(dbNew, null, 2), function(err) {
             if (err) {return console.log(err); }
 
+            console.log(dbNew);
             res.send(dbNew);
+
         });
+
     })
  
 }

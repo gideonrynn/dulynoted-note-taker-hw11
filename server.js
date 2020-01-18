@@ -3,21 +3,18 @@
 // ** Dependencies ** //
 const express = require("express");
 const path = require("path");
-// const fs = require('fs');
 
+
+// ** Express Setup ** //
 
 // Sets up express and port for localhost
 const app = express();
 const PORT = 3000;
 
-
 // Sets up express to handle data parsing, including assets
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
-
-
-//Data is set up in the db/db.json file
 
 
 // ** Routing **//

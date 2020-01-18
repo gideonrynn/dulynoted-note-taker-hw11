@@ -5,32 +5,12 @@ html, body {
   background-color: #acd2e6;
 }
 
-/* .container, body {
-  /* height: 100%; */
-  /* background-color: #acd2e6;
-} */
-
-/* .container {
-  max-width: 100%;
-} */
-
 .index-title {
   font-size: 60px;
 }
 
-/* .col-sidebar {
-  background-color: whitesmoke;
-  height: 100vh;
-  min-width: 300px;
-} */
-
-/* .col-main {
-  height: 100vh;
-} */
-
 .navbar {
   background-color: #36454f;
-
 }
 
 .save-note {
@@ -49,18 +29,21 @@ html, body {
   width: 100%;
   outline: none;
   border: none;
+  background-color: whitesmoke;
 }
 
 .note-textarea {
   resize: none;
   height: calc(100% - 63px);
-  padding-top: 15px;
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 .note-title {
-  height: 50px;
-  margin-top: 13px;
+  height: 60px;
+  margin-top: 0px;
   font-size: 3rem;
+  padding-left: 22px;
 }
 
 .note-title:read-only, .note-textarea:read-only {
@@ -72,6 +55,7 @@ html, body {
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: whitesmoke;
 }
 
 .list-container {
@@ -99,6 +83,6 @@ html, body {
   background-color: whitesmoke;
 }
 
-#startbtn {
+.btn {
   background-color: #36454f;
 }
