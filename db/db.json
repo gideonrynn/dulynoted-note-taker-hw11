@@ -1,42 +1,12 @@
 [
   {
     "title": "Repot plants",
-    "text": "Repot the rosemary, sun plant",
+    "text": "Rosemary, oregano, thyme",
     "id": 1
   },
   {
-    "title": "Order fish filters",
-    "text": "Large for 20 gallon, medium for 10",
-    "id": 2
-  },
-  {
     "title": "Plait hair",
-    "text": "First shampoo, make sure I have enough moisturizer",
-    "id": 3
-  },
-  {
-    "title": "Hug Sarah",
-    "text": "Open arms and squeeze",
-    "id": 4
-  },
-  {
-    "title": "Take a note",
-    "text": "Here's the note",
-    "id": 5
-  },
-  {
-    "title": "Sarah",
-    "text": "no",
-    "id": 6
-  },
-  {
-    "title": "How about?",
-    "text": "this",
-    "id": 7
-  },
-  {
-    "title": "test note",
-    "text": "note",
-    "id": 8
+    "text": "Buy moisturizer first",
+    "id": 2
   }
 ]
