@@ -4,6 +4,8 @@ const $saveNoteBtn = $(".save-note");
 const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
 const $noteItem = $(".list-group-item");
+const $savedDisplay = $(".saved");
+const $deletedDisplay = $(".deleted");
 
 let element = "";
 
@@ -64,6 +66,8 @@ const handleNoteSave = function() {
     getAndRenderNotes();
     renderActiveNote();
   });
+
+  $savedDisplay.show().fadeOut(3000);
 };
 
 // Delete the clicked note
@@ -71,29 +75,24 @@ const handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
 
+  $deletedDisplay.show().fadeOut(3000);
+
   let note = $(this)
     .parent(".list-group-item")
     .data();
 
-    // element = $(this).parent()
-    // console.log(element)
-
   if (activeNote.id === note.id) {
     activeNote = {};
   }
-
-  element = event.target.parentElement;
-  // console.log(element);
-
-  // element = $(this).parents('li').remove();
-  // console.log(event.target);
-
+  
   deleteNote(note.id).then(function() {
-    
+  
     getAndRenderNotes();
     renderActiveNote();
 
   });
+
+  
 };
 
 
@@ -144,6 +143,7 @@ const renderNoteList = function(notes) {
 
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = function() {
+
   return getNotes().then(function(data) {
     renderNoteList(data);
   });
@@ -158,3 +158,5 @@ $noteText.on("keyup", handleRenderSaveBtn);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
+$deletedDisplay.hide();
+$savedDisplay.hide();

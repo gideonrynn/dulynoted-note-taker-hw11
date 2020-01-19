@@ -4,14 +4,14 @@ const fs = require('fs');
 
 
 module.exports = function(app) {
-
-    //set db location, read and parse as variables to be used in the below routes
-    const dbFile = "db/db.json";
-    const dbRaw = fs.readFileSync(path.resolve(dbFile));
-    const db = JSON.parse(dbRaw);
     
     //route that will display all notes in db in json format
     app.get("/api/notes", function(req, res) {
+
+        //set db location, read and parse data from file to be used in routes
+        let dbFile = "db/db.json";
+        let dbRaw = fs.readFileSync(path.resolve(dbFile));
+        let db = JSON.parse(dbRaw);
 
         //pull data from json file and send as response in json format
         res.json(db);
@@ -20,6 +20,11 @@ module.exports = function(app) {
 
     //route that will display specific object by id
     app.get("/api/notes/:id", function(req, res) {
+
+        //set db location, read and parse data from file
+        let dbFile = "db/db.json";
+        let dbRaw = fs.readFileSync(path.resolve(dbFile));
+        let db = JSON.parse(dbRaw);
 
         //set variable that holds id from request entered by user
         let id = req.params.id;
@@ -36,6 +41,12 @@ module.exports = function(app) {
     });
 
     app.post("/api/notes", function(req, res) {
+        
+        //set db location, read and parse data from file
+        let dbFile = "db/db.json";
+        let dbRaw = fs.readFileSync(path.resolve(dbFile));
+        let db = JSON.parse(dbRaw);
+
 
         let newNote = req.body;
 
@@ -63,8 +74,12 @@ module.exports = function(app) {
 
     });
 
-    //as of 1/18/2020, notes deleted from db successfully, but do not remove notes from client side --> index.js adj
     app.delete("/api/notes/:id", function(req, res) {
+
+        //set db location, read and parse data from file
+        let dbFile = "db/db.json";
+        let dbRaw = fs.readFileSync(path.resolve(dbFile));
+        let db = JSON.parse(dbRaw);
 
         //set variable that holds id from request entered by user
         let idDelete = req.params.id;
