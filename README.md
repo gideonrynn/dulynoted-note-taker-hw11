@@ -4,6 +4,11 @@ This is a Git Hub repository for the NU Coding Bootcamp Note Taker with Express 
 ![notes page screenshot](public/assets/images/dulynoted1.jpg)
 
 
+# Deployed Link
+
+https://hidden-retreat-96452.herokuapp.com/
+
+
 # Setup
 
 Once logged in with [GitHub account](https://github.login/), clone the repo locally using link:
