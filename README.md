@@ -2,8 +2,7 @@
 This is a Git Hub repository for the NU Coding Bootcamp Note Taker with Express Homework for Week 11.
 
 ![notes page screenshot](public/assets/images/dulynoted1.jpg)
-![notes page screenshot](public/assets/images/dulynoted2.jpg)
-![application gif](public/assets/images/dulynotedgif)
+
 
 # Setup
 
