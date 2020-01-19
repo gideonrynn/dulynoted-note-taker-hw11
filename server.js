@@ -9,7 +9,7 @@ const path = require("path");
 
 // Sets up express and port for localhost
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Sets up express to handle data parsing, including assets
 app.use(express.urlencoded({ extended: true }));
